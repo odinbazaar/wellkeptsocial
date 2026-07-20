@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wellkept Social — Flat-fee social media management for local businesses</title>
+<meta name="description" content="Twelve custom posts a month for your practice or local business — written, designed, scheduled, and published for you. Flat $297/month. No contracts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20x='8'%20y='14'%20width='48'%20height='42'%20rx='9'%20fill='none'%20stroke='%2323251F'%20stroke-width='4'/%3E%3Cline%20x1='21'%20y1='7'%20x2='21'%20y2='18'%20stroke='%2323251F'%20stroke-width='4'%20stroke-linecap='round'/%3E%3Cline%20x1='43'%20y1='7'%20x2='43'%20y2='18'%20stroke='%2323251F'%20stroke-width='4'%20stroke-linecap='round'/%3E%3Cpath%20d='M21%2036l9%209%2014-16'%20fill='none'%20stroke='%232E5B44'%20stroke-width='5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Wellkept Social LLC",
+  "url": "https://wellkeptsocial.com",
+  "email": "hello@wellkeptsocial.com",
+  "telephone": "+1-307-303-3278",
+  "description": "Flat-fee social media management for local businesses. Twelve custom posts a month, done for you.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 N Gould St, Ste N",
+    "addressLocality": "Sheridan",
+    "addressRegion": "WY",
+    "postalCode": "82801",
+    "addressCountry": "US"
+  }
+}
+</script>
+<style>
+  :root {
+    --cream: #F7F4EC;
+    --paper: #FFFDF8;
+    --ink: #23251F;
+    --ink-soft: #4A4D43;
+    --muted: #6E7164;
+    --green: #2E5B44;
+    --green-deep: #1F4232;
+    --green-tint: #E9EEE2;
+    --green-on-dark: #8FB49A;
+    --line: rgba(35, 37, 31, 0.16);
+    --line-soft: rgba(35, 37, 31, 0.09);
+    --logo-green: var(--green);
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  p { text-wrap: pretty; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.12; text-wrap: balance; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Logo ---------- */
+  .lockup { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .mark { width: 34px; height: 34px; flex: none; }
+  .mark .s-ink { stroke: currentColor; fill: none; }
+  .mark .s-green { stroke: var(--logo-green); fill: none; }
+  .lockup .name { font-family: var(--serif); font-weight: 600; font-size: 21px; letter-spacing: -0.01em; }
+  .lockup .name span { color: var(--green); }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--cream) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 15px; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--green); }
+
+  .btn {
+    display: inline-block; text-decoration: none; font-size: 15.5px; font-weight: 600;
+    padding: 13px 24px; border-radius: 6px; border: 1.5px solid var(--ink);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn-primary { background: var(--ink); color: var(--cream); }
+  .btn-primary:hover { background: var(--green-deep); border-color: var(--green-deep); }
+  .btn-ghost { background: transparent; color: var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+  .nav .btn { padding: 9px 18px; font-size: 14.5px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 84px 0 100px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
+  .eyebrow {
+    font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green); font-weight: 600; margin-bottom: 22px;
+  }
+  .hero h1 { font-size: clamp(42px, 5.2vw, 64px); margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--green); }
+  .hero .lede { font-size: 19.5px; color: var(--ink-soft); max-width: 32em; margin-bottom: 34px; }
+  .hero .lede strong { color: var(--ink); }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .cta-note { font-size: 14px; color: var(--muted); margin-top: 16px; }
+  .cta-note b { color: var(--green); font-weight: 600; }
+
+  /* ---------- Calendar visual ---------- */
+  .visual { position: relative; }
+  .cal {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 26px 26px 30px; box-shadow: 0 24px 60px -30px rgba(35, 37, 31, 0.35);
+  }
+  .cal-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+  .cal-head .month { font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  .cal-head .count { font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); font-weight: 600; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .dow { font-size: 10.5px; letter-spacing: 0.08em; color: var(--muted); text-align: center; padding-bottom: 4px; text-transform: uppercase; }
+  .day {
+    aspect-ratio: 1; border-radius: 5px; border: 1px solid var(--line-soft);
+    position: relative; font-size: 10.5px; color: var(--muted);
+  }
+  .day .n { position: absolute; top: 4px; left: 6px; }
+  .day.blank { border-color: transparent; }
+  .day.post { background: var(--green-tint); border-color: rgba(46, 91, 68, 0.35); }
+  .day.post .chip {
+    position: absolute; inset: auto 5px 5px 5px; height: 40%;
+    border-radius: 3px; background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .day.post.done .chip { background: var(--green-deep); }
+  .day.post .chip svg { width: 10px; height: 10px; stroke: var(--cream); stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .day.post .chip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cream); opacity: 0.9; }
+  .cal-legend { display: flex; gap: 18px; margin-top: 16px; font-size: 12.5px; color: var(--muted); }
+  .cal-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  .sample {
+    position: absolute; right: -18px; bottom: -46px; width: 240px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: 0 18px 44px -18px rgba(35, 37, 31, 0.4);
+    transform: rotate(2deg); overflow: hidden;
+  }
+  .sample .img {
+    background: var(--green-deep); color: var(--cream); padding: 26px 20px 22px; min-height: 118px;
+    display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
+  }
+  .sample .img .tag { font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-on-dark); font-weight: 600; }
+  .sample .img .quote { font-family: var(--serif); font-style: italic; font-size: 17.5px; line-height: 1.25; }
+  .sample .body { padding: 14px 16px 16px; }
+  .sample .bar { height: 7px; border-radius: 4px; background: var(--line-soft); margin-bottom: 7px; }
+  .sample .bar.b1 { width: 92%; } .sample .bar.b2 { width: 78%; } .sample .bar.b3 { width: 44%; }
+  .sample .label { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 92px 0; }
+  section + section { border-top: 1px solid var(--line-soft); }
+  .sec-head { max-width: 640px; margin-bottom: 56px; }
+  .sec-head h2 { font-size: clamp(30px, 3.4vw, 42px); margin-bottom: 16px; }
+  .sec-head h2 em { font-style: italic; font-weight: 500; color: var(--green); }
+  .sec-head p { color: var(--ink-soft); font-size: 18px; }
+
+  /* Problem */
+  .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+  .cols-3 h3 { font-size: 21.5px; margin-bottom: 10px; }
+  .cols-3 p { color: var(--ink-soft); font-size: 16px; }
+  .rule-top { border-top: 2px solid var(--ink); padding-top: 20px; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; counter-reset: step; }
+  .step { counter-increment: step; }
+  .step .num {
+    font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--green);
+    display: block; margin-bottom: 12px;
+  }
+  .step .num::before { content: "Step " counter(step); }
+  .step h3 { font-size: 21.5px; margin-bottom: 10px; }
+  .step p { color: var(--ink-soft); font-size: 16px; }
+
+  /* Included */
+  .included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; max-width: 880px; }
+  .inc {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 18px 0; border-bottom: 1px solid var(--line-soft); font-size: 16.5px;
+  }
+  .inc svg { width: 20px; height: 20px; flex: none; margin-top: 3px; stroke: var(--green); stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .inc b { font-weight: 600; }
+  .inc .sub { display: block; color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+  .included-note { margin-top: 28px; font-size: 15.5px; color: var(--muted); max-width: 620px; }
+
+  /* Who */
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; }
+  .who { border-top: 2px solid var(--ink); padding-top: 20px; }
+  .who .idx { font-family: var(--serif); font-style: italic; color: var(--green); font-size: 15px; }
+  .who h3 { font-size: 23px; margin: 8px 0 10px; }
+  .who p { color: var(--ink-soft); font-size: 16px; max-width: 30em; }
+
+  /* Pricing */
+  .pricing { background: var(--ink); color: var(--cream); --logo-green: var(--green-on-dark); }
+  .pricing .sec-head h2 { color: var(--cream); }
+  .pricing .sec-head p { color: rgba(247, 244, 236, 0.72); }
+  .price-card {
+    display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: start;
+    border: 1px solid rgba(247, 244, 236, 0.25); border-radius: 12px; padding: 52px 56px;
+    background: rgba(247, 244, 236, 0.04);
+  }
+  .price-big { font-family: var(--serif); font-size: 84px; font-weight: 600; line-height: 1; }
+  .price-big .per { font-size: 22px; font-weight: 400; font-style: italic; color: var(--green-on-dark); }
+  .price-sub { margin-top: 12px; font-size: 15.5px; color: rgba(247, 244, 236, 0.65); }
+  .price-list { list-style: none; display: grid; gap: 12px; margin-bottom: 30px; }
+  .price-list li { display: flex; gap: 12px; font-size: 16.5px; }
+  .price-list svg { width: 19px; height: 19px; flex: none; margin-top: 4px; stroke: var(--green-on-dark); stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .founding {
+    border-top: 1px solid rgba(247, 244, 236, 0.18); padding-top: 22px; margin-top: 4px;
+    font-size: 15.5px; color: rgba(247, 244, 236, 0.75); max-width: 34em;
+  }
+  .founding b { color: var(--cream); }
+  .pricing .btn { border-color: var(--cream); }
+  .pricing .btn-primary { background: var(--cream); color: var(--ink); }
+  .pricing .btn-primary:hover { background: var(--green-on-dark); border-color: var(--green-on-dark); color: var(--ink); }
+
+  /* FAQ */
+  .faq { max-width: 760px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    gap: 24px; padding: 24px 0; font-family: var(--serif); font-weight: 600; font-size: 20px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--sans); font-weight: 400; font-size: 26px; color: var(--green); flex: none; transition: transform 0.2s ease; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq .a { padding: 0 0 26px; color: var(--ink-soft); max-width: 40em; }
+
+  /* Final CTA */
+  .final { text-align: center; padding: 110px 0; }
+  .final h2 { font-size: clamp(34px, 4vw, 52px); margin-bottom: 18px; }
+  .final h2 em { font-style: italic; font-weight: 500; color: var(--green); }
+  .final p { color: var(--ink-soft); font-size: 18.5px; max-width: 36em; margin: 0 auto 36px; }
+  .final .contact-line { margin-top: 22px; font-size: 15.5px; color: var(--muted); }
+  .final .contact-line a { color: var(--green); font-weight: 600; text-decoration: none; }
+  .final .contact-line a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer { background: var(--ink); color: var(--cream); --logo-green: var(--green-on-dark); padding: 56px 0 44px; }
+  .foot-grid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+  .foot-left .tagline { margin-top: 14px; font-size: 15px; color: rgba(247, 244, 236, 0.6); max-width: 26em; }
+  .foot-contact { font-size: 15.5px; line-height: 2; text-align: right; }
+  .foot-contact a { color: var(--cream); text-decoration: none; }
+  .foot-contact a:hover { color: var(--green-on-dark); }
+  .legal {
+    border-top: 1px solid rgba(247, 244, 236, 0.14); margin-top: 44px; padding-top: 24px;
+    font-size: 13px; color: rgba(247, 244, 236, 0.45);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+    .visual { max-width: 520px; margin: 0 auto; }
+    .sample { position: static; transform: none; margin: 24px auto 0; }
+    .cols-3, .steps { grid-template-columns: 1fr; gap: 36px; }
+    .included-grid, .who-grid { grid-template-columns: 1fr; }
+    .price-card { grid-template-columns: 1fr; gap: 36px; padding: 40px 32px; }
+    .nav-links { display: none; }
+    .foot-contact { text-align: left; }
+    section { padding: 72px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="lockup" href="#top" aria-label="Wellkept Social — home">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect class="s-ink" x="8" y="14" width="48" height="42" rx="9" stroke-width="4"/>
+        <line class="s-ink" x1="21" y1="7" x2="21" y2="18" stroke-width="4" stroke-linecap="round"/>
+        <line class="s-ink" x1="43" y1="7" x2="43" y2="18" stroke-width="4" stroke-linecap="round"/>
+        <path class="s-green" d="M21 36l9 9 14-16" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="name">Wellkept <span>Social</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#included">What's included</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="mailto:hello@wellkeptsocial.com?subject=Free%20sample%20post">Get a free sample post</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Flat-fee social media management</p>
+        <h1>Your social media, <em>well kept.</em></h1>
+        <p class="lede">
+          Twelve custom posts a month for your practice or local business —
+          written, designed, scheduled, and published for you.
+          <strong>Flat $297/month. No contracts. Cancel anytime.</strong>
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:hello@wellkeptsocial.com?subject=Free%20sample%20post">Get a free sample post</a>
+          <a class="btn btn-ghost" href="tel:+13073033278">+1 (307) 303-3278</a>
+        </div>
+        <p class="cta-note"><b>Now onboarding our first 3 founding clients.</b> Tell us your business name — we'll design one post free, no strings.</p>
+      </div>
+
+      <div class="visual">
+        <div class="cal">
+          <div class="cal-head">
+            <span class="month">Your month</span>
+            <span class="count">12 posts</span>
+          </div>
+          <div class="cal-grid" id="calGrid">
+            <span class="dow">M</span><span class="dow">T</span><span class="dow">W</span><span class="dow">T</span><span class="dow">F</span><span class="dow">S</span><span class="dow">S</span>
+          </div>
+          <div class="cal-legend">
+            <span><span class="swatch" style="background:var(--green-deep)"></span> published</span>
+            <span><span class="swatch" style="background:var(--green)"></span> scheduled</span>
+          </div>
+        </div>
+        <div class="sample" aria-hidden="true">
+          <div class="img">
+            <span class="tag">Team spotlight · 01</span>
+            <span class="quote">Four generations.<br>One standard.</span>
+          </div>
+          <div class="body">
+            <div class="bar b1"></div>
+            <div class="bar b2"></div>
+            <div class="bar b3"></div>
+            <div class="label">Sample post · caption &amp; hashtags included</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PROBLEM ============ -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>A quiet feed <em>quietly</em> costs you.</h2>
+        <p>Your next customer looks you up before they call. Here's what usually happens next.</p>
+      </div>
+      <div class="cols-3">
+        <div class="rule-top">
+          <h3>Customers check first</h3>
+          <p>Before booking a dentist, a plumber, or a showing, people look at Instagram and Facebook. What they find shapes whether the call happens at all.</p>
+        </div>
+        <div class="rule-top">
+          <h3>Dead accounts read worse than none</h3>
+          <p>A feed that stopped posting months ago tells people no one's minding the store — even when the work behind the counter is excellent.</p>
+        </div>
+        <div class="rule-top">
+          <h3>You have a business to run</h3>
+          <p>Showing up consistently on social media is a real job. It shouldn't be yours, and it shouldn't cost agency-retainer money either.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How it works</h2>
+        <p>One short call, then your feed stays alive without you touching it.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num"></span>
+          <h3>A 20-minute call</h3>
+          <p>We learn your services, your voice, and what makes your business worth talking about. Have photos of your team or your work? Great — send them when you can. Not required.</p>
+        </div>
+        <div class="step">
+          <span class="num"></span>
+          <h3>We build your month</h3>
+          <p>Twelve custom posts — written and designed for your business, not pulled from a template bank. You review and approve every single one before it goes anywhere.</p>
+        </div>
+        <div class="step">
+          <span class="num"></span>
+          <h3>We publish, you run your business</h3>
+          <p>Approved posts go out on a steady schedule to Instagram and Facebook. Each month you get a plain-English summary of what went out and how it did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCLUDED ============ -->
+  <section id="included">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What $297 covers</h2>
+        <p>Everything a kept feed needs. Nothing you don't.</p>
+      </div>
+      <div class="included-grid">
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>12 custom posts every month</b><span class="sub">Designed and written for your business — no stock templates</span></span></div>
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>A planned monthly calendar</b><span class="sub">Built around your services, seasons, and story</span></span></div>
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Captions &amp; hashtags included</b><span class="sub">Plain English, written to sound like you</span></span></div>
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Scheduling &amp; publishing</b><span class="sub">Instagram + Facebook, on a steady rhythm</span></span></div>
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Your approval on every post</b><span class="sub">Nothing publishes without your OK</span></span></div>
+        <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>A monthly plain-English report</b><span class="sub">What went out, what worked — no vanity-metric fog</span></span></div>
+      </div>
+      <p class="included-note">No setup fee. No ad spend required. No lock-in — it's month to month, and you can cancel with one email.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHO ============ -->
+  <section id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Built for local businesses people <em>look up</em> before they call</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who">
+          <span class="idx">01</span>
+          <h3>Dental practices</h3>
+          <p>Before-and-after work, team stories, patient education — dentistry is the most visual, trust-driven service there is. Your feed should show it.</p>
+        </div>
+        <div class="who">
+          <span class="idx">02</span>
+          <h3>Med-spas &amp; clinics</h3>
+          <p>Patients under 40 check social proof before they book. A polished, active feed is the difference between a consult and a scroll-past.</p>
+        </div>
+        <div class="who">
+          <span class="idx">03</span>
+          <h3>Home services</h3>
+          <p>HVAC, plumbing, landscaping — homeowners check who they're letting into their homes. Team spotlights and finished jobs build that trust.</p>
+        </div>
+        <div class="who">
+          <span class="idx">04</span>
+          <h3>Real estate offices</h3>
+          <p>Listings move fast and reputations move faster. A kept feed keeps your name in the neighborhood between closings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>One flat price. That's the point.</h2>
+        <p>No tiers, no retainers, no "custom quote" call. The price is on the page.</p>
+      </div>
+      <div class="price-card">
+        <div>
+          <div class="price-big">$297<span class="per"> / month</span></div>
+          <p class="price-sub">Month to month · cancel anytime<br>No setup fee</p>
+        </div>
+        <div>
+          <ul class="price-list">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>12 custom posts, designed &amp; written for you</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Monthly content calendar, planned in advance</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Publishing to Instagram + Facebook, on schedule</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Your approval on every post, every time</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Monthly report in plain English</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:hello@wellkeptsocial.com?subject=Founding%20client%20spot">Claim a founding spot</a>
+          <p class="founding"><b>Founding clients:</b> we're onboarding our first 3 clients at this rate in exchange for honest feedback as we grow. Founding clients keep their rate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Fair questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do I need to provide photos or content?</summary>
+          <p class="a">It helps, but it's not required. Photos of your team and your work make posts stronger — send them whenever you have them. When you don't, we design posts from your services, your story, and what makes your business different.</p>
+        </details>
+        <details>
+          <summary>Which platforms do you manage?</summary>
+          <p class="a">Instagram and Facebook — the two places local customers actually check before they call. Keeping those two genuinely alive beats being half-present on five platforms.</p>
+        </details>
+        <details>
+          <summary>Who approves what gets posted?</summary>
+          <p class="a">You do. Every post is sent to you for approval before it's published. Nothing goes out under your business's name without your OK.</p>
+        </details>
+        <details>
+          <summary>Is there a contract or setup fee?</summary>
+          <p class="a">No and no. It's a flat $297 a month, month to month. If it's not working for you, cancel with a single email — no exit calls, no fine print.</p>
+        </details>
+        <details>
+          <summary>Our account has been dead for a year. Is that a problem?</summary>
+          <p class="a">It's the most common starting point we see, and it's fixable. A steady month of good posts reads as "under new management" — in the best way. The sooner the feed restarts, the sooner it stops costing you customers.</p>
+        </details>
+        <details>
+          <summary>What exactly is the free sample post?</summary>
+          <p class="a">Tell us your business name and we'll design one post in your voice — free, no strings, no follow-up sequence. If you like it, that's what every month with us looks like.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final">
+    <div class="wrap">
+      <h2>See it before you <em>decide.</em></h2>
+      <p>Send us your business name. We'll design one free sample post so you can judge the quality directly — no strings attached.</p>
+      <a class="btn btn-primary" href="mailto:hello@wellkeptsocial.com?subject=Free%20sample%20post">Get your free sample post</a>
+      <p class="contact-line">
+        Or just say hello — <a href="mailto:hello@wellkeptsocial.com">hello@wellkeptsocial.com</a> · <a href="tel:+13073033278">+1 (307) 303-3278</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-left">
+        <span class="lockup">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect class="s-ink" x="8" y="14" width="48" height="42" rx="9" stroke-width="4"/>
+            <line class="s-ink" x1="21" y1="7" x2="21" y2="18" stroke-width="4" stroke-linecap="round"/>
+            <line class="s-ink" x1="43" y1="7" x2="43" y2="18" stroke-width="4" stroke-linecap="round"/>
+            <path class="s-green" d="M21 36l9 9 14-16" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="name">Wellkept <span style="color:var(--green-on-dark)">Social</span></span>
+        </span>
+        <p class="tagline">Flat-fee social media management for local businesses. Twelve custom posts a month, done for you.</p>
+      </div>
+      <div class="foot-contact">
+        <a href="mailto:hello@wellkeptsocial.com">hello@wellkeptsocial.com</a><br>
+        <a href="tel:+13073033278">+1 (307) 303-3278</a><br>
+        <a href="https://wellkeptsocial.com">wellkeptsocial.com</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Wellkept Social LLC. All rights reserved.</span>
+      <span>30 N Gould St, Ste N, Sheridan, WY 82801, USA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Calendar mockup: generic 31-day month starting Wednesday; 12 post days, first 4 published.
+  (function () {
+    var grid = document.getElementById('calGrid');
+    var postDays = [2, 5, 7, 9, 12, 14, 16, 19, 21, 23, 26, 28];
+    var published = [2, 5, 7, 9];
+    var leadingBlanks = 2, totalDays = 31;
+    var cells = leadingBlanks + totalDays;
+    var trailing = (7 - (cells % 7)) % 7;
+
+    function cell(html, cls) {
+      var d = document.createElement('div');
+      d.className = 'day' + (cls ? ' ' + cls : '');
+      d.innerHTML = html;
+      grid.appendChild(d);
+    }
+    for (var b = 0; b < leadingBlanks; b++) cell('', 'blank');
+    for (var day = 1; day <= totalDays; day++) {
+      if (postDays.indexOf(day) !== -1) {
+        var done = published.indexOf(day) !== -1;
+        var inner = done
+          ? '<span class="n">' + day + '</span><span class="chip"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 8"/></svg></span>'
+          : '<span class="n">' + day + '</span><span class="chip"><span class="dot"></span></span>';
+        cell(inner, done ? 'post done' : 'post');
+      } else {
+        cell('<span class="n">' + day + '</span>');
+      }
+    }
+    for (var t = 0; t < trailing; t++) cell('', 'blank');
+  })();
+</script>
+
+</body>
+</html>
