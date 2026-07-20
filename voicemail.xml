@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pause length="1"/>
+  <Say voice="Polly.Joanna">
+    Hi, you've reached Wellkept Social.
+    We can't take your call right now, so please leave your name,
+    your business name, and the best email or number to reach you,
+    and we'll get back to you within one business day.
+    You can also email us anytime at hello at wellkept social dot com.
+    Please speak after the beep.
+  </Say>
+  <Record maxLength="120" playBeep="true" transcribe="true"/>
+  <Say voice="Polly.Joanna">Thank you. We'll be in touch soon. Goodbye.</Say>
+</Response>
